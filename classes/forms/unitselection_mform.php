@@ -105,6 +105,8 @@ class unitselection_mform extends moodleform {
 
                     $qual->selected =   (!empty($v))  ?  1 :  0 ;
 
+                    $qual->title    =   mysql_real_escape_string($qual->title);
+
                     insert_record('ilp_qual_units',$qual);
                 }
             }   else {
